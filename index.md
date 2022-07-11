@@ -28,4 +28,7 @@ var num3 = num1 + num2;
 var num4 = num3 * num1;
 var num5 = ((num4 + num3) / num2);
 // What do you think num5 equals?
+// The Answer is in here somewhere...
 ```
+
+[Link to another page]()
