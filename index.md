@@ -4,7 +4,7 @@
 ## Links to my repositories (PUBLIC)
 * [Anagram](https://github.com/memesggopoop28/super-awesome-invention/)
 * [memesggopoop28](https://github.com/memesggopoop28/memesggopoop28)
-* [github.io page](memesggopoop28.github.io)
+* [github.io page](https://memesggopoop28.github.io)
 
 ## Links to my repositories (PRIVATE; won't work anyways)
 * [Discord Bot](https://github.com/memesggopoop28/Discord-bot)
@@ -31,4 +31,4 @@ var num5 = ((num4 + num3) / num2);
 // The Answer is in here somewhere...
 ```
 
-[Link to another page](memesggopoop28.github.io/num5Answer)
+[Link to another page](https://memesggopoop28.github.io/num5Answer)
