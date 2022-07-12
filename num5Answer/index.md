@@ -98,4 +98,8 @@ var answer7 = 22414;
 var answer8 = 111199248;
 var answer9 = 11443;
 var answer10 = 18842;
+var answer11 = 5284.114693156086;
+var answer12 = 88583910.341;
+var answer13 = 7748.8848;
+var answer14 = 22;
 ```
