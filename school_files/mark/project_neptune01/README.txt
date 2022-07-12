@@ -1,7 +1,7 @@
 README FIRST
 ============
 
-Use Github Version for complete version, and the other version for freeplay.
+Use SPACE BAR, ENTER/RETURN, UP ARROW, W or I to jump
 
 ============
 
