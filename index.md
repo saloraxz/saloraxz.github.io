@@ -36,6 +36,6 @@ var num5 = ((num4 + num3) / num2);
 #### Some more pages
 [Mark](https://memesggopoop28.github.io/school_files/mark/)
 [School](https://memesggopoop28.github.io/school_files)
-[Snake Game](https://memesgggopoop28.github.io/snake/)
+[Snake Game](https://memesggopoop28.github.io/snake/)
 
 ###### There is a secret game at this link that you have to find: [CLICK HERE](https://memesggopoop28.github.io/school_files/mark/project_neptune01/secret)
