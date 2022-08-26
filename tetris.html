@@ -152,6 +152,7 @@ function showGameOver() {
   context.textBaseline = 'middle';
   context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
   alert("Click ok to restart game");
+  context.clearRect(0, 0, canvas.width, canvas.height);
   requestAnimationFrame(loop);
 }
 
