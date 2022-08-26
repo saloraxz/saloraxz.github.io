@@ -119,6 +119,7 @@ function loop() {
       
       // snake occupies same space as a body part. reset game
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        alert("Game Over | Restarting...");
         snake.x = 160;
         snake.y = 160;
         snake.cells = [];
@@ -184,6 +185,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // start the game
+alert("Starting Game...");
 requestAnimationFrame(loop);
 </script>
   <a href="https://memesggopoop28.github.io/snake/endless"> Endless Mode</a>

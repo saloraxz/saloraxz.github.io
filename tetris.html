@@ -151,6 +151,8 @@ function showGameOver() {
   context.textAlign = 'center';
   context.textBaseline = 'middle';
   context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+  alert("Click ok to restart game");
+  requestAnimationFrame(loop);
 }
 
 const canvas = document.getElementById('game');
@@ -313,6 +315,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // start the game
+alert("Starting Game");
 rAF = requestAnimationFrame(loop);
 </script>
 </body>
