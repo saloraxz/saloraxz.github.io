@@ -151,11 +151,13 @@ function showGameOver() {
   context.textAlign = 'center';
   context.textBaseline = 'middle';
   context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+  
   alert("You so bad");
   alert("Press ok to restart...");
   gameOver = false;
   context.fillStyle = 'black';
   context.fillRect(0, canvas.height, canvas.width, 60);
+  requestAnimationFrame(rAF);
 }
 
 const canvas = document.getElementById('game');
