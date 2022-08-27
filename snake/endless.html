@@ -160,9 +160,15 @@ document.addEventListener('keydown', function(e) {
     snake.dx = grid;
     snake.dy = 0;
   }
+  // Spacebar
+  else if (e.which === 32) {
+    alert("Game is paused | Press 'ok' to unpause.");
+  }
 });
 
 // start the game
+alert("Controls: WASD or ←↑→  ↓ to move. Space bar to pause.");
+alert("Starting game...");
 requestAnimationFrame(loop);
 </script>
 </body>
