@@ -181,6 +181,10 @@ document.addEventListener('keydown', function(e) {
     snake.dx = grid;
     snake.dy = 0;
   }
+  // space key
+  else if (e.which === 32) {
+    alert("Game is paused | Press ok to unpause...");
+  }
   
 });
 
