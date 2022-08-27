@@ -47,6 +47,9 @@ var apple = {
   y: 320
 };
 
+// Score variable
+var score = 0;
+
 // get random whole numbers in a specific range
 // @see https://stackoverflow.com/a/1527820/2124254
 function getRandomInt(min, max) {
@@ -108,6 +111,8 @@ function loop() {
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
+      score++;
+      document.getElementById("scoreBoard").innerHTML = score;
 
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;
@@ -171,5 +176,6 @@ alert("Controls: WASD or ←↑→  ↓ to move. Space bar to pause.");
 alert("Starting game...");
 requestAnimationFrame(loop);
 </script>
+<p><h3 id="scoreBoard">      Score: </h3></p>
 </body>
 </html>
