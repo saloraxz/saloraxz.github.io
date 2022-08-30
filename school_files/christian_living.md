@@ -23,4 +23,4 @@
 
 
 ### Books of the Bible
-Genesis, Leviticus, Exodus, Numbers, Deuteromony, Joshua, Judah, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chorinthians, 2 Chorinthians,
+Genesis, Leviticus, Exodus, Numbers, Deuteromony, Joshua, Judah, Ruth, 1 Samuel, 2 Samuel, 1 Kings, 2 Kings, 1 Chorinthians, 2 Chorinthians, Psalms, Proverbs, Songs of songs, 
