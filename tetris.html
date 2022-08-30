@@ -35,6 +35,8 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+var score = 0;
+
 // generate a new tetromino sequence
 // @see https://tetris.fandom.com/wiki/Random_Generator
 function generateSequence() {
@@ -120,7 +122,8 @@ function placeTetromino() {
   // check for line clears starting from the bottom and working our way up
   for (let row = playfield.length - 1; row >= 0; ) {
     if (playfield[row].every(cell => !!cell)) {
-
+      score++;
+      document.getElementById("scoreBoard").innerHTML = "‎     Score: " + score;
       // drop every row above this one
       for (let r = row; r >= 0; r--) {
         for (let c = 0; c < playfield[r].length; c++) {
@@ -320,9 +323,10 @@ document.addEventListener('keydown', function(e) {
 });
 
 // start the game
-alert("Beta v0.2.1 | Things may not work")
+alert("Beta v0.2.4 | Things may not work")
 alert("Starting Game");
 rAF = requestAnimationFrame(loop);
 </script>
+<p><h3 id="scoreBoard">‎     Score: </h3></p>
 </body>
 </html>
