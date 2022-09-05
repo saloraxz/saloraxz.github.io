@@ -25,6 +25,8 @@
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 
+var score = 0;
+
 var grid = 16;
 var count = 0;
   
@@ -108,6 +110,8 @@ function loop() {
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
+      score++;
+      document.getElementById("scoreBoard").innerHTML = "‎     Score: " + score;
 
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;
@@ -194,5 +198,6 @@ alert("Starting Game...");
 requestAnimationFrame(loop);
 </script>
   <a href="https://memesggopoop28.github.io/snake/endless"> Endless Mode</a>
+  <p><h3 id="scoreBoard">‎     Score: 0</h3></p>
 </body>
 </html>
