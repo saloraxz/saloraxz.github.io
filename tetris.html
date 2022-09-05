@@ -316,6 +316,11 @@ document.addEventListener('keydown', function(e) {
 
     tetromino.row = row;
   }
+
+  // Space bar (pause)
+  if(e.which === 32){
+    alert("GAME PAUSED | Press 'ok' to continue.");
+  }
 });
 
 // start the game
