@@ -112,7 +112,7 @@ function loop() {
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
       score++;
-      document.getElementById("scoreBoard").innerHTML = "‎     Score: " + score;
+      document.getElementById("scoreBoard").innerHTML = "‎     <b>Score: <i>" + score + "</i></b>";
 
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;
@@ -126,7 +126,7 @@ function loop() {
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
         score = 0;
         alert("Game Over | Restarting...");
-        document.getElementById("scoreBoard").innerHTML = "‎     Score: " + score;
+        document.getElementById("scoreBoard").innerHTML = "‎     <b>Score: <i>" + score + "</i></b>";
         snake.x = 160;
         snake.y = 160;
         snake.cells = [];
@@ -201,6 +201,6 @@ alert("Starting Game...");
 requestAnimationFrame(loop);
 </script>
   <a href="https://memesggopoop28.github.io/snake/endless"> Endless Mode</a>
-  <p><h3 id="scoreBoard">‎     Score: 0</h3></p>
+  <p><h3 id="scoreBoard">‎     <b>Score: <i>0</i></b></h3></p>
 </body>
 </html>
