@@ -15,4 +15,4 @@
 * Create rick.html (Done)
 
 * Create search.html (Broken)
-- Check the SearXNG thingy
+- Check the [https://github.com/searxng/searxng](SearXNG) thingy
