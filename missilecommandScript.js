@@ -286,19 +286,16 @@ function loop(time) {
   explosions = explosions.filter(explosion => explosion.alive);
   cities = cities.filter(city => city.alive);
   silos = silos.filter(silo => silo.alive);
-  if (missileCount === 0) {
-    context.fillStyle = 'black';
-    context.globalAlpha = 0.75;
-    context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
-
-    context.globalAlpha = 1;
-    context.fillStyle = 'white';
-    context.font = '36px monospace';
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-    var missileDestroyed = missileMaxCount - missileCount;
-    context.fillText("Missiles destroyed: " + missileDestroyed, canvas.width / 2, canvas.height / 2);
-  }
+  context.fillStyle = 'black';
+  context.globalAlpha = 0.75;
+  context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+  context.globalAlpha = 1;
+  context.fillStyle = 'white';
+  context.font = '36px monospace';
+  context.textAlign = 'center';
+  context.textBaseline = 'middle';
+  var missileDestroyed = missileMaxCount - missileCount;
+  context.fillText("Missiles destroyed: " + missileDestroyed, canvas.width / 2, canvas.height / 2);
 }
 
 // listen to mouse events to fire counter-missiles
