@@ -101,8 +101,8 @@ function spawnMissile() {
 // start at -2 seconds (time is in milliseconds) to give the player 1
 // second before the missiles start
 let lastTime = -2000;
-var missileCount = 0;
-var missileMaxCount = 0;
+var missileCount = 1;
+var missileMaxCount = 1;
 function loop(time) {
   requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
