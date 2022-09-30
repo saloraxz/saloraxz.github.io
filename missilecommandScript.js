@@ -101,15 +101,19 @@ function spawnMissile() {
 // start at -2 seconds (time is in milliseconds) to give the player 1
 // second before the missiles start
 let lastTime = -2000;
+var missileCount = 0;
+var missileMaxCount = 0;
 function loop(time) {
   requestAnimationFrame(loop);
   context.clearRect(0,0,canvas.width,canvas.height);
-
+  if (missiles === 0)
   // spawn missiles every interval of 3 seconds (if the level allows
   // more missiles)
   if (time - lastTime > 3000 && currInterval < levels[currLevel].length) {
     for (let i = 0; i < levels[currLevel][currInterval]; i++) {
       spawnMissile();
+      missileCount = missileCount + 1;
+      missileMaxCount = missileMaxCount + 1;
     }
 
     currInterval++;
@@ -188,6 +192,9 @@ function loop(time) {
       const dist = distance(explosion, missile.pos);
       if (dist < missileSize + explosion.size) {
         missile.alive = false;
+        if (missileCount > 0) {
+            missileCount = missileCount - 1;
+        }
       }
     });
 
@@ -279,6 +286,19 @@ function loop(time) {
   explosions = explosions.filter(explosion => explosion.alive);
   cities = cities.filter(city => city.alive);
   silos = silos.filter(silo => silo.alive);
+  if (missileCount === 0) {
+    context.fillStyle = 'black';
+    context.globalAlpha = 0.75;
+    context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+
+    context.globalAlpha = 1;
+    context.fillStyle = 'white';
+    context.font = '36px monospace';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    var missileDestroyed = missileMaxCount - missileCount;
+    context.fillText("Missiles destroyed: " + missileDestroyed, canvas.width / 2, canvas.height / 2);
+  }
 }
 
 // listen to mouse events to fire counter-missiles
