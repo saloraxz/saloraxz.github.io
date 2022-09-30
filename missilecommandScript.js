@@ -333,7 +333,5 @@ canvas.addEventListener('click', e => {
     });
   }
 });
-
-alert("Use Your Mouse To Play ;)");
 // start the game
 requestAnimationFrame(loop);
