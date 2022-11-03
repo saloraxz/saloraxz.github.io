@@ -12,16 +12,16 @@ In this report, I will study the nutrition facts of the cereals I have chosen: C
 
 ## Nutrition Charts
 ### Milo Cereal Nutrition Chart
-
+![Milo Cereal](milo-cereal-chart.png)
 
 ### Coco Pops Nutrition Chart
-
+![Coco Pops](coco-pops-chart.png)
 
 ### Weet-bix Nutrition Chart
-
+![Weet-bix](weet-bix-chart.png)
 
 ### Froot Loops Nutrition Chart
-
+![Froot Loops](froot-loops-chart.png)
 
 ## Tables
 ![Table (per 100g)](table.png)
