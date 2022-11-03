@@ -1,3 +1,8 @@
 # Math Investigation charts (Y7 T4)
 ![Energy](imageonline-co-barchart.png)
 ![Protein](imageonline-co-barchart%20(1).png)
+![Fat](imageonline-co-barchart%20(2).png)
+![Carbohydrates](imageonline-co-barchart%20(3).png)
+![Sugars](imageonline-co-barchart%20(4).png)
+![Dietary Fibres](imageonline-co-barchart%20(5).png)
+![Sodium](imageonline-co-barchart%20(6).png)
