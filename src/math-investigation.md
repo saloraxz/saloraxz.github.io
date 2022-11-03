@@ -1,3 +1,6 @@
+Hey there Mr. Lotsos :)
+You probably wondering how I did all of this. It's on a web hoster called Github. It hosts the website for you, but you have to write the code for yourself. The easiest language for this is the '.md' format. md(MarkDown) code is easy to learn. It's like typing a document on google docs, but with extra features. You can add images with links, add your own images and other things. If you want to learn more, head to [w3 schools - MarkDown](https://www.w3schools.io/file/markdown-introduction/)(It's the best place to learn). The rest of this is the report for my Maths Investigation.
+
 # Math Investigation (Y7 T4)
 
 ### Table of contents
