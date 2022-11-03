@@ -26,7 +26,7 @@ In this report, I will study the nutrition facts of the cereals I have chosen: C
 
 *How to find the answer*
 1. Find which cereal has the least amount of sugar, salt and fats.
-2. Then find which cereal has more dietary fibre, protein and vitams.
+2. Then find which cereal has more dietary fibre, protein and vitamins.
 
 
 ## Nutrition Charts
