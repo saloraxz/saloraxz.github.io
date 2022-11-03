@@ -60,4 +60,4 @@ In this report, I will study the nutrition facts of the cereals I have chosen: C
 I chose the ~~column~~ bar chart because it seems more appropriate than a pie graph or a line graph. A line graph isn't appropriate because it is used to show **changes** of the item, product or subject throughout time. A pie graph is used to represent items, products or subjects in a total. It is based on one thing. This investigation talks about 4 things, which is the cereals.
 
 ## THE CONCLUSION
-I think the beast out of the four cereals is **_Weet-bix_**. I think this because even though it has more sodium than two of the cereals, it still has more protein, dietary fibre, less fats and the least amount of carbs **and** sugars out of all the cereals compared.
+I think the best out of the four cereals is **_Weet-bix_**. I think this because even though it has more sodium than two of the cereals, it still has more protein, dietary fibre, less fats and the least amount of carbs **and** sugars out of all the cereals compared.
