@@ -16,6 +16,8 @@ Eric Tu
 + [Weet-bix](#weet-bix-nutrition-chart)
 + [Froot Loops](#froot-loops-nutrition-chart)
 + [Tables](#tables)
++ [Graphs](#graphs)
+    + [Quesiton](#question)
 
 
 In this report, I will study the nutrition facts of the cereals I have chosen: Coco Pops, Froot Loops, Milo Cereal and Weetbix. Then I will ask questions: Which cereal is the healthiest? Which has the most sodium (salt)? After that, I will explain why I chose that question. Next, I will analyse the nutrition data and compare them. Some nutrition facts are Energy, Protein, Sugar (Natural and Artificial), Sodium and Fats. Then I will draw a table to show the information per 100g for all cereals. I will collate the data from the four tables into one table. Then, I will answer the following question, "Think of the different types of graphs used to represent data in statistics. Say why you chose the type of graph you did. Explain clearly why this is a more appropriate graph than other types." Finally, I will present my work to Mr Lotsos.
@@ -43,7 +45,7 @@ In this report, I will study the nutrition facts of the cereals I have chosen: C
 ## Tables
 ![Table (per 100g)](table.png)
 
-## Charts
+## Graphs
 ![Energy](imageonline-co-barchart.png)
 ![Protein](imageonline-co-barchart%20(1).png)
 ![Fat](imageonline-co-barchart%20(2).png)
@@ -51,3 +53,11 @@ In this report, I will study the nutrition facts of the cereals I have chosen: C
 ![Sugars](imageonline-co-barchart%20(4).png)
 ![Dietary Fibres](imageonline-co-barchart%20(5).png)
 ![Sodium](imageonline-co-barchart%20(6).png)
+
+### Question
+'Think of the different types of graphs that are used to represent data in statistics. Say why you chose the type of graph you did. Explain clearly why this is a more appropriate graph than other types which may be used to represent other data.'
+
+I chose the ~~column~~ bar chart because it seems more appropriate than a pie graph or a line graph. A line graph isn't appropriate because it is used to show **changes** of the item, product or subject throughout time. A pie graph is used to represent items, products or subjects in a total. It is based on one thing. This investigation talks about 4 things, which is the cereals.
+
+## THE CONCLUSION
+I think the beast out of the four cereals is **_Weet-bix_**. I think this because even though it has more sodium than two of the cereals, it still has more protein, dietary fibre, less fats and the least amount of carbs **and** sugars out of all the cereals compared.
