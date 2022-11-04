@@ -2,7 +2,7 @@
 
 Hey there Mr. Lotsos :),
 
-You're probably wondering how I did all of this. It's on an app called [Github](http://github.com). It has a thing called [Github Pages](https://docs.github.com/en/pages). It hosts the website for you, but you have to write the code for yourself. Your website domain name is (<username>.github.io). The easiest language for this is the '.md' format. md (MarkDown) code is easy to learn. It's like typing a document on google docs, but with extra features. You can add images with links, add your own images and other things. If you want to learn more about MarkDown, head to [w3 schools - MarkDown](https://www.w3schools.io/file/markdown-introduction/)(It's the best place to learn). If you want to learn more about Github Pages, head to [their official website](https://docs.github.com/en/pages). The rest of this is the report for my Maths Investigation.
+You're probably wondering how I did all of this. It's on an app called [Github](http://github.com). It has a thing called [Github Pages](https://docs.github.com/en/pages). It hosts the website for you, but you have to write the code for yourself. Your website domain name is (<\username>.github.io). The easiest language for this is the '.md' format. md (MarkDown) code is easy to learn. It's like typing a document on google docs, but with extra features. You can add images with links, add your own images and other things. If you want to learn more about MarkDown, head to [w3 schools - MarkDown](https://www.w3schools.io/file/markdown-introduction/)(It's the best place to learn). If you want to learn more about Github Pages, head to [their official website](https://docs.github.com/en/pages). The rest of this is the report for my Maths Investigation.
 
 Read On,
 
