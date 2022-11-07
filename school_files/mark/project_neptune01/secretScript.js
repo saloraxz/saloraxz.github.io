@@ -1,4 +1,5 @@
-        //CONSTANTS
+    setTimeout(function() {
+		//CONSTANTS
 		var CANVAS_WIDTH = 800;
 		var CANVAS_HEIGHT = 600;
 
@@ -368,3 +369,4 @@
 			spriteSheet.spriteWidth, spriteSheet.spriteHeight
 			);
 		}
+	}, 1000);
