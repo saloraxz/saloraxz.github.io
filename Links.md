@@ -24,6 +24,11 @@
 
 [Answer to the question on](https://memesggopoop28.github.io/num5Answer) [my homepage!!!](https://memesggopoop28.github.io)
 
+[Math Investigation](https://memesggopoop28.github.io/src/math-investigation)
+
+
+
+
 
 
 
