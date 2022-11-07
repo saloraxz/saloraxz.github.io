@@ -1,4 +1,4 @@
-		//CONSTANTS
+        //CONSTANTS
 		var CANVAS_WIDTH = 800;
 		var CANVAS_HEIGHT = 600;
 
