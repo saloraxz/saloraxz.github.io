@@ -33,5 +33,5 @@
 
 
 
-[discord-img]: htt\ps://img.shields.io/badge/Discord-7389D8?logo=discord&logoColor=white
+[discord-img]: https://img.shields.io/badge/Discord-7389D8?logo=discord&logoColor=white
 [discord-link]: https://discord.gg/kWYZM3KVfE
