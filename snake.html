@@ -74,9 +74,18 @@ function loop() {
 
   /* remove cells as we move away from them */ if (snake.cells.length > snake.maxCells) {snake.cells.pop();}
 
-  /* draw apple context.fillStyle = 'red'; */ context.fillRect(apple.x, apple.y, grid-1, grid-1);
+  /* draw apple context.fillStyle = 'red'; */ context.fillStyle = 'red'; context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
-  /* draw snake one cell at a time */ context.fillStyle = 'dark green'; context.fillStyle = 'green'; snake.cells.forEach(function(cell, index) {
+  /* draw snake one cell at a time */ 
+  for (var i; i < snake.cells; i++){
+    if (i === 0){
+      context.fillStyle = 'dark green';
+    }
+    else {
+      context.fillStyle = 'green'
+    }
+  }
+  context.fillStyle = 'dark green'; context.fillStyle = 'green'; snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
     context.fillRect(cell.x, cell.y, grid-1, grid-1);  
