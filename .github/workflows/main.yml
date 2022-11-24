@@ -1,0 +1,21 @@
+name: Install things
+
+on:
+  # run anytime
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # build and push docker on GHPages
+      - name: build-push
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ DOCKER_USERNAME }}
+          password: ${{ DOCKER_PASSWORD }}
+          registry: myregistry
+          repository: myorg/myrepo
+          tags: v1
