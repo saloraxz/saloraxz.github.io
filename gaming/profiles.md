@@ -1,4 +1,4 @@
-![[Epic games][epic-games-logo]][epic-games-link]
+[![Epic games][epic-games-logo]][epic-games-link]
 
 
 
