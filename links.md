@@ -26,7 +26,9 @@
 
 [Math Investigation](https://memesggopoop28.github.io/src/math-investigation)
 
-If there is a link that I have forgotten to put up here, don't forget to email me at nori.miya.kuzaku@gmail.com
+If there is a link that I have forgotten to put up here, don't forget to email me at nori.miya.kazuka@gmail.com or saloraxz@icloud.com
+
+ Make sure to check out @kazuka-miya and @memesggopoop28 👍 thx
 
 
 
