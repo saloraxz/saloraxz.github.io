@@ -4,12 +4,31 @@
         <title>Drive-In Delights Survey</title>
         </head>
     <body>
+        <script type="application/javascript">
+
+            function resizeIFrameToFitContent( iFrame ) {
+            
+                iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+                iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+            }
+            
+            window.addEventListener('DOMContentLoaded', function(e) {
+            
+                var iFrame = document.getElementById( 'Survey' );
+                resizeIFrameToFitContent( iFrame );
+            
+                // or, to resize all iframes:
+                var iframes = document.querySelectorAll("iframe");
+                for( var i = 0; i < iframes.length; i++) {
+                    resizeIFrameToFitContent( iframes[i] );
+                }
+            } );
+            
+            </script>
         <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdjzU29YnU7BeoQUC4-YVBgsV-x6kqv9I1eNbc9b2mAO0QBHA/viewform?embedded=true" 
-        width="640" 
-        height="1001" 
-        frameborder="0" 
-        marginheight="0" 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdjzU29YnU7BeoQUC4-YVBgsV-x6kqv9I1eNbc9b2mAO0QBHA/viewform?embedded=true"
+        frameborder="0"
+        id="Survey"
         marginwidth="0">Loading…</iframe>
     </body>
 </html>
