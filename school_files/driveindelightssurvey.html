@@ -2,29 +2,17 @@
 <html lang="en">
     <head>
         <title>Drive-In Delights Survey</title>
+        <style>
+            iframe{      
+                display: block;  /* iframes are inline by default */   
+                height: 100vh;  /* Set height to 100% of the viewport height */   
+                width: 100vw;  /* Set width to 100% of the viewport width */     
+                border: none; /* Remove default border */
+                background: black; /* Just for styling */
+            }
+        </style>
         </head>
     <body>
-        <script type="application/javascript">
-
-            function resizeIFrameToFitContent( iFrame ) {
-            
-                iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-                iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-            }
-            
-            window.addEventListener('DOMContentLoaded', function(e) {
-            
-                var iFrame = document.getElementById( 'Survey' );
-                resizeIFrameToFitContent( iFrame );
-            
-                // or, to resize all iframes:
-                var iframes = document.querySelectorAll("iframe");
-                for( var i = 0; i < iframes.length; i++) {
-                    resizeIFrameToFitContent( iframes[i] );
-                }
-            } );
-            
-            </script>
         <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLSdjzU29YnU7BeoQUC4-YVBgsV-x6kqv9I1eNbc9b2mAO0QBHA/viewform?embedded=true"
         frameborder="0"
