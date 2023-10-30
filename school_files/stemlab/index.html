@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+            body { 
+                background: #1c3745;
+                text-align:center;
+                font-family:comic sans MS;
+  margin: 0;
+            }
+            h1 {
+                background-color:DodgerBlue;
+            }
+            h2 {
+            	background-color:Tomato;
+            }
+            table {
+                color:#a5b1b8
+            }
+            hr {
+                height: 0;
+                border: 0;
+                border-bottom: 1px dashed #b5e853;
+                color: #b5e853
+            }
+            #header {
+  background-color: #839096;
+  padding: 50px 10px;
+  color: black;
+  text-align: center;
+  font-size: 90px; 
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+canvas {
+    border: 1px solid white;
+  }
+  </style>
+
+  <title>
+  </title>
+</head>
+
+<body>
+<div id="header" class="clock" onload="showTime()"></div>
+<script>
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("header").innerText = time;
+    document.getElementById("header").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+</script>
+
+<div style="margin-top:200px;padding:15px 15px 2500px;font-size:30px">
+  
+  <h1 style="background-color:DodgerBlue;">Hello World</h1>
+
+
+  <h2>Fun Facts!</h2>
+
+
+  <table>
+    <tr>
+      <th>The first computer covered 1,800 square feet</th>
+
+      <td>ENIAC (Electronic Numerical Integrator and Computer), the first
+      large-scale, programmable computer to run at electronic speed without
+      being slowed by any mechanical parts was built during World War II. ENIAC
+      was breathtaking. Weighing at 30 tons, the U-shaped construct filled a
+      1,800 square feet room. Its 40 cabinets, each of them nine feet tall,
+      were packed with 17,500 vacuum tubes, 10,000 capacitors, 6,000 switches,
+      and 1,500 relays.</td>
+    </tr>
+
+
+    <tr>
+      <th>Python was not named after a snake</th>
+
+      <td>Python is a widely-used, object-oriented, and high-level programming
+      language with dynamic semantics, used for general-purpose programming. It
+      was created by Guido van Rossum and first released on February 20, 1991.
+      While we may all know Python as a giant snake, the name of the Python
+      programming language actually comes from an old BBC comedy sketch series
+      called Monty Python's Flying Circus.</td>
+    </tr>
+
+
+    <tr>
+      <th>There are over 700 different programming languages</th>
+
+      <td>A programming language is an artificial language built to allow
+      humans to give instructions to a computer. Computers can't understand
+      English, Turkish, or Mandarin, and even though people can technically
+      learn binary (the base language of computers) almost none do.</td>
+    </tr>
+  </table>
+
+  <hr>
+
+
+  <table>
+    <tr>
+      <th>There is an incredible number of computer programming languages that
+      are used by software developers, web developers, coders, and other
+      computer science professionals. According to Wikipedia, there are over
+      700 different programming languages, including esoteric programming
+      languages.</th>
+    </tr>
+  </table>
+</div>
+
+<script>
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.fontSize = "30px";
+  } else {
+    document.getElementById("header").style.fontSize = "90px";
+  }
+}
+
+</script>
+
+<canvas width="400" height="400" id="game"></canvas>
+<script>
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+var grid = 16;
+var count = 0;
+  
+var snake = {
+  x: 160,
+  y: 160,
+  
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
+  
+  // keep track of all grids the snake body occupies
+  cells: [],
+  
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
+
+// Score variable
+var score = 0;
+
+// get random whole numbers in a specific range
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+  
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+
+  // draw apple
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+
+  // draw snake one cell at a time
+  context.fillStyle = 'dark green';
+  context.fillStyle = 'green';
+  snake.cells.forEach(function(cell, index) {
+    
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);  
+
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+      score++;
+      document.getElementById("scoreBoard").innerHTML = "‎     Score: " + score;
+
+      // canvas is 400x400 which is 25x25 grids 
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+  });
+}
+
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // Endless by backtracking on itself
+  // a key
+  if (e.which === 65) {
+    snake.dx = -grid;
+    snake.dy = 0;
+           }
+  // w key
+  else if (e.which === 87) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // s key
+  else if (e.which === 83) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+  // d key
+  else if (e.which === 68) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // Spacebar
+  else if (e.which === 32) {
+    alert("Game is paused | Press 'ok' to unpause.");
+  }
+});
+
+// start the game
+console.warn("%cDON'T CHEAT!!!", "font-size: 36px; color: red");
+console.log("You can cheat by typing 'score = {The score number you want};'");
+console.log("Then press enter and eat one apple and watch what happens.");
+console.log(" score = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999990; ");
+requestAnimationFrame(loop);
+</script>
+<p><h3 id="scoreBoard">‎     Score: </h3></p>
+
+</body>
+</html>
+
