@@ -1,34 +1,34 @@
 [![Discord][discord-img]][discord-link]
 
-[Snake Game](https://memesggopoop28.github.io/snake)
+[Snake Game](https://saloraxz.github.io/snake)
 
-[Endless snake](https://memesggopoop28.github.io/snake/endless)
+[Endless snake](https://saloraxz.github.io/snake/endless)
 
-[tetris](https://memesggopoop28.github.io/tetris)
+[tetris](https://saloraxz.github.io/tetris)
 
-[Jumping game](https://memesggopoop28.github.io/school_files/mark/project_neptune01/secret)
+[Jumping game](https://saloraxz.github.io/school_files/mark/project_neptune01/secret)
 
-[School Files](https://memesggopoop28.github.io/school_files)
+[School Files](https://saloraxz.github.io/school_files)
 
-[Mark's page](https://memesggopoop28.github.io/school_files/mark)
+[Mark's page](https://saloraxz.github.io/school_files/mark)
 
-[Project Neptune thingy](https://memesggopoop28.github.io/school_files/mark/project_neptune01)
+[Project Neptune thingy](https://saloraxz.github.io/school_files/mark/project_neptune01)
 
-[Main Page](https://memesggopoop28.github.io)
+[Main Page](https://saloraxz.github.io)
 
-[Bomb page - In PROGRESS!!!](https://memesggopoop28.github.io/bomb)
+[Bomb page - In PROGRESS!!!](https://saloraxz.github.io/bomb)
 
-[Search page using SearXNG - bR0KkEN!!!](https://memesggopoop28.github.io/search)
+[Search page using SearXNG - bR0KkEN!!!](https://saloraxz.github.io/search)
 
-[Use this to rick roll someone](https://memesggopoop28.github.io/school_files/rick)
+[Use this to rick roll someone](https://saloraxz.github.io/school_files/rick)
 
-[Answer to the question on](https://memesggopoop28.github.io/num5Answer) [my homepage!!!](https://memesggopoop28.github.io)
+[Answer to the question on](https://saloraxz.github.io/num5Answer) [my homepage!!!](https://saloraxz.github.io)
 
-[Math Investigation](https://memesggopoop28.github.io/src/math-investigation)
+[Math Investigation](https://saloraxz.github.io/src/math-investigation)
 
-If there is a link that I have forgotten to put up here, don't forget to email me at nori.miya.kazuka@gmail.com or saloraxz@icloud.com
+If there is a link that I have forgotten to put up here, don't forget to email me at <null> contact info taken down.
 
- Make sure to check out @kazuka-miya and @memesggopoop28 👍 thx
+ Make sure to check out @kazuka-miya and @saloraxz 👍 thx
 
 
 
