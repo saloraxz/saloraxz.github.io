@@ -15,8 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: List files in the workspace
-        run: |
-          ls -F -a
+        run: ls -F -a
 
       # --- New Step 1: Log in separately using the v3 login action ---
       - name: Log in to Docker Hub
