@@ -3,6 +3,11 @@ name: Install things
 on:
   # run anytime manually from the Actions tab
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      # - develop
+    
 
 jobs:
   generate:
