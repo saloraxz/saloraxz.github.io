@@ -18,7 +18,7 @@ jobs:
         run: ls -F -a
 
       # --- New Step 1: Log in separately using the v3 login action ---
-      - name: Log in to Docker Hub
+      - name: Hello
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
