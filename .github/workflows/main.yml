@@ -3,7 +3,7 @@ name: CI/CD Pipeline & GitHub Pages Deployment
 # This workflow runs ONLY after the workflow named 'CodeQL' completes
 on:
   workflow_run:
-    workflows: ["CodeQL"] # Assumes your other workflow is named 'CodeQL'
+    workflows: ["CodeQL Advanced"] # Assumes your other workflow is named 'CodeQL'
     types:
       - completed
 
