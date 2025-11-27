@@ -1,17 +1,23 @@
-# Start from a base image (e.g., Node.js 18)
-FROM node:18-alpine
+# Use a very small, efficient Nginx base image
+FROM nginx:alpine
 
-# Set the working directory inside the container
-WORKDIR /app
+# Copy all files from your current directory into the Nginx default serving directory
+COPY . /usr/share/nginx/html
 
-# Copy application files from your local machine into the container
-COPY package*.json ./
+# Uses the Ruby version compatible with  Github Pages
+FROM ruby:3.3-alpine
 
-# Run commands to install dependencies
-RUN npm install
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Install Jekyll dependencies
+RUN apk add --no-cache build-base nodejs
+COPY Gemfile* ./
+RUN bundle install
 
 # Copy the rest of the application source code
 COPY . .
 
-# Define the command to run when the container starts
-CMD ["npm", "start"]
+# Command to build the site and serve it locally for testing
+# Note: GitHub Actions will typically just run the 'build' command themselves
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
