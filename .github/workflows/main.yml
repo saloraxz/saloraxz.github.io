@@ -1,42 +1,73 @@
-name: Install things
+name: CI/CD Pipeline & GitHub Pages Deployment
 
+# This workflow runs ONLY after the workflow named 'CodeQL' completes
 on:
-  # Remove 'push' and 'workflow_dispatch' from main.yml
-  # This workflow triggers ONLY after the 'CodeQL Advanced' workflow finishes
   workflow_run:
-    workflows: ["CodeQL Advanced"] # Matches the 'name:' defined in your  codeql.yml file
+    workflows: ["CodeQL"] # Assumes your other workflow is named 'CodeQL'
     types:
       - completed
-    
 
 jobs:
-  generate:
+  # This job dynamically checks if the preceding CodeQL run was successful
+  check_codeql_status:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # This condition ensures the pipeline stops if CodeQL failed
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: CodeQL finished successfully
+        run: echo "Code scanning passed. Proceeding with build and deployment."
 
+  # Job 2: Build and Push Docker Image (needs CodeQL status to pass)
+  build-push-docker:
+    runs-on: ubuntu-latest
+    needs: check_codeql_status
+    timeout-minutes: 20
     steps:
       - name: Checkout repository
-        # Use a recent version of checkout action
         uses: actions/checkout@v4
 
-      # --- New Step 1: Log in separately using the v3 login action ---
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          # The 'registry' input is only needed if you are NOT using Docker Hub (e.g., use ghcr.io here)
 
-      # --- New Step 2: Use the v4 build-push action ---
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          # Required input: sets the build context (look in the current directory)
           context: . 
-          # Required input: tells the action to push the image after building
-          push: true 
-          # Required input: specifies the full name and tag for the final image
-          # Format is registry_url/username/repository:tag
+          push: true
+          # Example tag: yourusername/myrepo:v1
           tags: ${{ secrets.DOCKER_USERNAME }}/myrepo:v1
-          # The 'repository' and 'registry' inputs from v1 are gone in v4, 
-          # replaced by the formatted 'tags' input.
+
+  # Job 3: Deploy to GitHub Pages (needs Docker build to pass)
+  deploy-pages:
+    runs-on: ubuntu-latest
+    needs: build-push-docker
+    # GHPages deployment requires a specific token permission
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      # Assuming your Jekyll build creates a '_site' folder
+      - name: Build site with Jekyll (or equivalent build command)
+        run: |
+          # This command must be replaced by whatever generates your static files
+          echo "Placeholder for Jekyll build command or similar"
+          # Example Jekyll build: bundle exec jekyll build --destination _site
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Uploads the static files needed for GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './_site' # !! CRITICAL: Change '_site' to your actual output folder !!
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
