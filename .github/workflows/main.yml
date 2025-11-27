@@ -1,7 +1,7 @@
 name: Install things
 
 on:
-  # run anytime
+  # run anytime manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -10,12 +10,28 @@ jobs:
     timeout-minutes: 20
 
     steps:
-      # build and push docker on GHPages
-      - name: build-push
-        uses: docker/build-push-action@v1
+      - name: Checkout repository
+        # Use a recent version of checkout action
+        uses: actions/checkout@v4
+
+      # --- New Step 1: Log in separately using the v3 login action ---
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          registry: myregistry
-          repository: myorg/myrepo
-          tags: v1
+          # The 'registry' input is only needed if you are NOT using Docker Hub (e.g., use ghcr.io here)
+
+      # --- New Step 2: Use the v4 build-push action ---
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          # Required input: sets the build context (look in the current directory)
+          context: . 
+          # Required input: tells the action to push the image after building
+          push: true 
+          # Required input: specifies the full name and tag for the final image
+          # Format is registry_url/username/repository:tag
+          tags: ${{ secrets.DOCKER_USERNAME }}/myrepo:v1
+          # The 'repository' and 'registry' inputs from v1 are gone in v4, 
+          # replaced by the formatted 'tags' input.
