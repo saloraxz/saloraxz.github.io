@@ -1,12 +1,12 @@
 name: Install things
 
 on:
-  # run anytime manually from the Actions tab
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-      # - develop
+  # Remove 'push' and 'workflow_dispatch' from main.yml
+  # This workflow triggers ONLY after the 'CodeQL Advanced' workflow finishes
+  workflow_run:
+    workflows: ["CodeQL Advanced"] # Matches the 'name:' defined in your  codeql.yml file
+    types:
+      - completed
     
 
 jobs:
