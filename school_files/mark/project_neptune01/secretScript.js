@@ -17,7 +17,7 @@
 		var ROBOT_WIDTH = 141;
 		var ROBOT_HEIGHT = 139;
 		var ROBOT_NR_ANIMATION_FRAMES = 9;
-		var ROBOT_ANIMATION_SPEED = 5;w
+		var ROBOT_ANIMATION_SPEED = 5;
 		var ROBOT_X_SPEED = 4;
 		
 		
@@ -47,7 +47,7 @@
 		var backgroundImage = new Image();
 		backgroundImage.src = "background.png";
 
-		var bush1Image = new Image
+		var bush1Image = new Image()
 		bush1Image.src = "bush1.png";
 
 		var bush2Image = new Image();
@@ -198,6 +198,26 @@
 		var nanonautTouchedARobot = updateRobots ();
 		if (nanonautTouchedARobot) {
 			screenshake = true;
+			let nanonautStoppedTouchingARobot = true;
+			Object.defineProperty(window, 'myBoolean', {
+				get: function() {
+					return nanonautStoppedTouchingARobot;
+				},
+  set: function(newValue) {
+    if (nanonautStoppedTouchingARobot === true && newValue === false) {
+      console.log("The boolean just changed from true to false!");
+      // Place your specific line of code here
+    }
+    nanonautStoppedTouchingARobot = newValue;
+  }
+});
+
+// Example usage:
+myBoolean = true; // No output, still true
+myBoolean = false; // Output: "The boolean just changed from true to false!"
+myBoolean = false; // No output, already false
+myBoolean = true; // No output, changed to true
+myBoolean = false; // Output: "The boolean just changed from true to false!"
 			if (nanonautHealth > 0) nanonautHealth -= 1;
 		}
 		//check if game is over
