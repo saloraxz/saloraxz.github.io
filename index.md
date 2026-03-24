@@ -1,3 +1,8 @@
+---
+layout: default
+title: My Portfolio
+---
+
 # Eric Tu
 **Student** 📍 Australia  
 ---

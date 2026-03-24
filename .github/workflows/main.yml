@@ -44,29 +44,32 @@ jobs:
   deploy-pages:
     runs-on: ubuntu-latest
     needs: build-push-docker
-    # GHPages deployment requires a specific token permission
     permissions:
       pages: write
       id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
-      # Assuming your Jekyll build creates a '_site' folder
-      - name: Build site with Jekyll (or equivalent build command)
-        run: |
-          # This command must be replaced by whatever generates your static files
-          echo "Placeholder for Jekyll build command or similar"
-          # Example Jekyll build: bundle exec jekyll build --destination _site
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2' # Adjust to your preference
+          bundler-cache: true # Runs 'bundle install' and caches it for you
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Uploads the static files needed for GitHub Pages
+      - name: Build with Jekyll
+        # This creates the actual _site folder
+        run: bundle exec jekyll build --destination _site
+        env:
+          JEKYLL_ENV: production
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './_site' # !! CRITICAL: Change '_site' to your actual output folder !!
+          path: './_site' 
 
       - name: Deploy to GitHub Pages
         id: deployment
