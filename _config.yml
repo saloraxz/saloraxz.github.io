@@ -1,1 +1,4 @@
 remote_theme: pages-themes/hacker@v0.2.0
+# Add a baseurl if your site is not at the root (usually "" for username.github.io)
+baseurl: "" 
+url: "https://saloraxz.github.io"
