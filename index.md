@@ -26,3 +26,5 @@ I also play DCS with my T.Flight HOTAS 4 (not enough buttons)
 ---
 
 > "Logic will get you from A to B. Imagination will take you everywhere." – *Albert Einstein*
+> "If you're afraid - don't do it, if you're doing it - don't be afraid!" - *Genghis Khan*
+> "The strength of a wall is neither greater nor less than the courage of the men who defend it." - *Genghis Khan*
