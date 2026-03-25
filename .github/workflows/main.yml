@@ -1,3 +1,6 @@
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 name: CI/CD Pipeline & GitHub Pages Deployment
 
 # This workflow runs ONLY after the workflow named 'CodeQL' completes

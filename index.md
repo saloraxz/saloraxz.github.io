@@ -1,30 +1,44 @@
 ---
 layout: default
-title: My Portfolio
+title: Portfolio
 ---
 
 # Eric Tu
-**Student** 📍 Australia  
+**Student & Scripting Enthusiast** 📍 Australia
+🔗 [GitHub Profile](https://github.com/saloraxz)
+
 ---
 
 ## 🚀 About Me
-I am a Student passionate about Planes (big or small, fast or slow), Scripting and Food.
-I also play DCS with my T.Flight HOTAS 4 (not enough buttons)
+I am a student passionate about aviation (planes big or small, fast or slow), scripting and food. When I'm not coding, I'm likely flying in **DCS** with my T.Flight HOTAS 4 (even if it never has enough buttons!).
+
 ---
 
 ## 🎓 Education
 
-### **A School**
-* **Degree:** N/A
-* **Duration:** N/A
-* **Honors:** N/A
-* **Relevant Coursework:** Cert 2 Music.
+### **[Name of Your School]**
+* **Focus:** Cert 2 Music & Technical Studies
+* **Duration:** [Start Year] – Present
+* **Key Coursework:** Music Technology, Scripting Fundamentals, System Automation.
+
 ---
 
-## 📁 Projects
-*Check out my [Repositories](https://github.com/saloraxz?tab=repositories) for more!*
+## 🛠️ Scripting Projects
+
+### **🕹️ Snake Game**
+* Developed a browser-based version of the classic Snake game.
+* Focused on clean logic and responsive controls.
+* [Play it here](./snake/)
+
+### **Stickmangame**
+* A stickmangame.
+* [Check it out](./stickmangame/)
+
+### **✈️ DCS & Aviation Scripts**
+* Working on specialized scripts to enhance flight simulation and controller mapping.
+
 ---
 
-> "Logic will get you from A to B. Imagination will take you everywhere." – *Albert Einstein*
-> "If you're afraid - don't do it, if you're doing it - don't be afraid!" - *Genghis Khan*
-> "The strength of a wall is neither greater nor less than the courage of the men who defend it." - *Genghis Khan*
+## 🏆 Achievements
+* **DevOps Pipeline:** Successfully built a CI/CD pipeline with **CodeQL** security scanning and **Docker** deployment.
+* **Fedora Power User:** Successfully configured a local Linux development environment with Docker and Tailscale.
