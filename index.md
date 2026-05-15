@@ -42,3 +42,7 @@ I am a student passionate about aviation (planes big or small, fast or slow), sc
 ## 🏆 Achievements
 * **DevOps Pipeline:** Successfully built a CI/CD pipeline with **CodeQL** security scanning and **Docker** deployment.
 * **Fedora Power User:** Successfully configured a local Linux development environment with Docker and Tailscale.
+
+[server](https://fedoralap.tail055b0e.ts.net)
+
+Version 2.0.1
